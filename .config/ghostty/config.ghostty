@@ -1,0 +1,37 @@
+keybind = global:ctrl+grave_accent=toggle_visibility
+
+# Ghostty is only the carrier for herdr: shortcuts translated into herdr input
+# (\x1b[13;5u = herdr prefix ctrl+enter in CSI-u form, \x1b<digit> = alt+<digit> = herdr [keys.indexed] workspaces)
+# Tabs (used most): cmd
+keybind = cmd+t=text:\x1b[13;5uc\r
+keybind = cmd+digit_1=text:\x1b[13;5u1
+keybind = cmd+digit_2=text:\x1b[13;5u2
+keybind = cmd+digit_3=text:\x1b[13;5u3
+keybind = cmd+digit_4=text:\x1b[13;5u4
+keybind = cmd+digit_5=text:\x1b[13;5u5
+keybind = cmd+digit_6=text:\x1b[13;5u6
+keybind = cmd+digit_7=text:\x1b[13;5u7
+keybind = cmd+digit_8=text:\x1b[13;5u8
+keybind = cmd+digit_9=text:\x1b[13;5u9
+keybind = cmd+shift+bracket_right=text:\x1b[13;5un
+keybind = cmd+shift+bracket_left=text:\x1b[13;5up
+keybind = cmd+shift+w=text:\x1b[13;5uX
+# Workspaces: ctrl (ctrl+t stays free for Claude Code / fzf / nvim)
+keybind = ctrl+shift+t=text:\x1b[13;5uN
+keybind = ctrl+shift+w=text:\x1b[13;5uD
+keybind = ctrl+digit_1=text:\x1b1
+keybind = ctrl+digit_2=text:\x1b2
+keybind = ctrl+digit_3=text:\x1b3
+keybind = ctrl+digit_4=text:\x1b4
+keybind = ctrl+digit_5=text:\x1b5
+keybind = ctrl+digit_6=text:\x1b6
+keybind = ctrl+digit_7=text:\x1b7
+keybind = ctrl+digit_8=text:\x1b8
+keybind = ctrl+digit_9=text:\x1b9
+# Panes
+keybind = cmd+d=text:\x1b[13;5uv
+keybind = cmd+shift+d=text:\x1b[13;5u-
+keybind = cmd+w=text:\x1b[13;5ux
+# herdr-nvim
+keybind = cmd+e=text:\x1b[13;5ue
+keybind = cmd+o=text:\x1b[13;5uo

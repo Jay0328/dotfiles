@@ -18,6 +18,7 @@ LINKS=(
   ".gitconfig-sporty    .gitconfig-sporty"
   ".ssh/config          .ssh/config"
   ".config/herdr/config.toml  .config/herdr/config.toml"
+  ".config/ghostty/config.ghostty  .config/ghostty/config.ghostty"
 )
 
 say() { printf '  %-8s %s\n' "$1" "$2"; }
