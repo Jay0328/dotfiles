@@ -1,0 +1,33 @@
+[push]
+    autoSetupRemote = true
+
+# 預設：私人帳號 (Jay0328)
+[include]
+    path = ~/.gitconfig-personal
+
+# 下面的 includeIf 寫在預設之後，才會覆蓋掉預設值。
+# remote URL 有 `git@github.com:org/...` 和 `git@github.com:/org/...` 兩種寫法。
+
+# 私人帳號 (Jay0328)：放在 ~/Documents/Jay0328/ 或 ~/Documents/github/Jay0328/ 底下，或 remote 指向 Jay0328
+[includeIf "gitdir:~/Documents/Jay0328/"]
+    path = ~/.gitconfig-personal
+[includeIf "gitdir:~/Documents/github/Jay0328/"]
+    path = ~/.gitconfig-personal
+[includeIf "hasconfig:remote.*.url:git@github.com:Jay0328/**"]
+    path = ~/.gitconfig-personal
+[includeIf "hasconfig:remote.*.url:git@github.com:/Jay0328/**"]
+    path = ~/.gitconfig-personal
+[includeIf "hasconfig:remote.*.url:https://github.com/Jay0328/**"]
+    path = ~/.gitconfig-personal
+
+# Sporty 帳號 (JayChen-OpenNetTW)：放在 ~/Documents/opennetltd/ 或 ~/Documents/github/opennetltd/ 底下，或 remote 指向 opennetltd
+[includeIf "gitdir:~/Documents/opennetltd/"]
+    path = ~/.gitconfig-sporty
+[includeIf "gitdir:~/Documents/github/opennetltd/"]
+    path = ~/.gitconfig-sporty
+[includeIf "hasconfig:remote.*.url:git@github.com:opennetltd/**"]
+    path = ~/.gitconfig-sporty
+[includeIf "hasconfig:remote.*.url:git@github.com:/opennetltd/**"]
+    path = ~/.gitconfig-sporty
+[includeIf "hasconfig:remote.*.url:https://github.com/opennetltd/**"]
+    path = ~/.gitconfig-sporty

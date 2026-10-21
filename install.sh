@@ -11,8 +11,12 @@ BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
 
 # "<path in repo>  <path under $HOME>"
 LINKS=(
-  ".zprofile  .zprofile"
-  ".zshrc     .zshrc"
+  ".zprofile            .zprofile"
+  ".zshrc               .zshrc"
+  ".gitconfig           .gitconfig"
+  ".gitconfig-personal  .gitconfig-personal"
+  ".gitconfig-sporty    .gitconfig-sporty"
+  ".ssh/config          .ssh/config"
 )
 
 say() { printf '  %-8s %s\n' "$1" "$2"; }

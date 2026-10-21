@@ -1,2 +1,6 @@
 zsh/*.local.zsh
 .zcompdump*
+
+# Only the ssh config belongs here — never keys.
+.ssh/*
+!.ssh/config

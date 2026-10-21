@@ -1,0 +1,6 @@
+# Sporty GitHub (JayChen-OpenNetTW)
+[user]
+	name = Jay Chen
+	email = jay.chen@opennet.tw
+[core]
+	sshCommand = ssh -i ~/.ssh/github_rsa_sporty -o IdentitiesOnly=yes

@@ -1,0 +1,6 @@
+# 私人 GitHub (Jay0328)
+[user]
+	name = Jay Chen
+	email = gcobs135102@gmail.com
+[core]
+	sshCommand = ssh -i ~/.ssh/github_ed25519_personal -o IdentitiesOnly=yes
