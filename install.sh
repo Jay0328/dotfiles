@@ -19,6 +19,7 @@ LINKS=(
   ".ssh/config          .ssh/config"
   ".config/herdr/config.toml  .config/herdr/config.toml"
   ".config/ghostty/config.ghostty  .config/ghostty/config.ghostty"
+  ".config/nvim  .config/nvim"
 )
 
 say() { printf '  %-8s %s\n' "$1" "$2"; }

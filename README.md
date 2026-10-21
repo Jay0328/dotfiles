@@ -18,6 +18,7 @@
 | `.ssh/config` | `~/.ssh/config` | GitHub 預設用私人 key。key 本身不進 repo |
 | `.config/herdr/config.toml` | `~/.config/herdr/config.toml` | herdr 終端多工器設定 |
 | `.config/ghostty/config.ghostty` | `~/.config/ghostty/config.ghostty` | Ghostty 設定，快捷鍵轉送給 herdr |
+| `.config/nvim/` | `~/.config/nvim/` | Neovim（LazyVim）設定，插件裝在 `~/.local/share/nvim` 不進 repo |
 | `zsh/<feature>.zsh` | — | 依功能分檔：`shell`、`nodejs`、`java`、`claude`… |
 | `zsh/*.local.zsh` | — | 機器 / 公司專屬設定，git 忽略，最後載入 |
 | `.p10k.zsh` | — | prompt 設定，`p10k configure` 會直接寫回這裡 |
