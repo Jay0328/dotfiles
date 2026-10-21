@@ -31,3 +31,6 @@
     path = ~/.gitconfig-sporty
 [includeIf "hasconfig:remote.*.url:https://github.com/opennetltd/**"]
     path = ~/.gitconfig-sporty
+
+[url "git@github.com:opennetltd/"]
+    insteadOf = https://github.com/opennetltd/
