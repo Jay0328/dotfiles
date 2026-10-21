@@ -1,11 +1,17 @@
 onboarding = false
 
-[ui]
+[experimental]
+# Switch to the ASCII layout while prefix mode is active, so prefix+letter works with Zhuyin on
+switch_ascii_input_source_in_prefix = true
+# Keep the Zhuyin candidate window at the cursor in agent TUIs that hide the real cursor.
+# Limited to agents so nvim normal mode doesn't get a second cursor
+reveal_hidden_cursor_for_cjk_ime = true
+cjk_ime_agents = ["claude", "codex"]
+kitty_graphics = true
 
-[ui.sidebar]
-
-[ui.sidebar.agents]
-rows = [["state_icon", "machine", "workspace", "tab"], ["agent"]]
+# ctrl+enter instead of ctrl+b: macOS Chinese IMEs swallow ctrl+b, and ctrl+b stays free for nvim/shell
+[keys]
+prefix = "ctrl+enter"
 
 # herdr-nvim: persistent per-tab nvim sidebar + agent-touched file picker
 [[keys.command]]
@@ -24,15 +30,84 @@ description = "open file from agent output"
 [keys.indexed]
 workspaces = "alt"
 
-# ctrl+enter instead of ctrl+b: macOS Chinese IMEs swallow ctrl+b, and ctrl+b stays free for nvim/shell
-[keys]
-prefix = "ctrl+enter"
+[theme]
+name = "tokyo-night"
+auto_switch = false
 
-[experimental]
-# Switch to the ASCII layout while prefix mode is active, so prefix+letter works with Zhuyin on
-switch_ascii_input_source_in_prefix = true
-# Keep the Zhuyin candidate window at the cursor in agent TUIs that hide the real cursor.
-# Limited to agents so nvim normal mode doesn't get a second cursor
-reveal_hidden_cursor_for_cjk_ime = true
-cjk_ime_agents = ["claude", "codex"]
-kitty_graphics = true
+[ui]
+status_indicators = "symbols"
+sidebar_min_width = 36
+sidebar_max_width = 36
+prompt_new_tab_name = false
+pane_scrollbars = false
+pane_gaps = false
+show_agent_labels_on_pane_borders = true
+
+[ui.sidebar.agents]
+rows = [
+  [
+    "workspace",
+    "state_text",
+  ],
+  [
+    "state_icon",
+    "agent",
+    { token = "pane", fg = "#bd93f9", bold = true, dim = false },
+  ],
+  [
+    "terminal_title_stripped",
+  ],
+]
+
+[ui.sidebar.agents.rows_by_agent]
+claude = [
+  [
+    "workspace",
+    "state_text",
+  ],
+  [
+    "state_icon",
+    "machine",
+    { token = "agent", fg = "#d97757" },
+    { token = "pane", fg = "#bd93f9", bold = true, dim = false },
+  ],
+  [
+    "terminal_title_stripped",
+  ],
+]
+codex = [
+  [
+    "workspace",
+    "state_text",
+  ],
+  [
+    "state_icon",
+    "machine",
+    { token = "agent", fg = "#4b56f5" },
+    { token = "pane", fg = "#bd93f9", bold = true, dim = false },
+  ],
+  [
+    "terminal_title_stripped",
+  ],
+]
+pi = [
+  [
+    "workspace",
+    "state_text",
+  ],
+  [
+    "state_icon",
+    "machine",
+    { token = "agent", fg = "#5e93b6" },
+    { token = "pane", fg = "#bd93f9", bold = true, dim = false },
+  ],
+  [
+    "terminal_title_stripped",
+  ],
+]
+
+[ui.sidebar.spaces]
+rows = [["workspace"]]
+
+[ui.toast]
+delivery = "system"
