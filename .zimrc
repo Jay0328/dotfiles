@@ -1,0 +1,26 @@
+# zim modules — `zimfw update` updates them all.
+# Config path is set by ZIM_CONFIG_FILE in .zshrc; no ~/.zimrc needed.
+
+# zim defaults: options, key bindings
+zmodule environment
+zmodule input
+
+# oh-my-zsh: `z <dir>` jumps to frequently visited directories
+zmodule ohmyzsh/ohmyzsh --root plugins/z --fpath . --source z.plugin.zsh
+
+# Runs compinit. Must come after modules that add to fpath, and before
+# oh-my-zsh plugins, which call compdef at load time.
+zmodule completion
+
+# oh-my-zsh: git aliases (gst, gb, ...) need git_current_branch from lib/git.zsh
+zmodule ohmyzsh/ohmyzsh --root lib --source git.zsh
+zmodule ohmyzsh/ohmyzsh --root plugins/git
+# `als` lists / searches aliases
+zmodule ohmyzsh/ohmyzsh --root plugins/aliases
+
+# prompt
+zmodule romkatv/powerlevel10k --use degit
+
+# Must be last.
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
