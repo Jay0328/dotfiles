@@ -16,6 +16,7 @@
 | `.gitconfig` | `~/.gitconfig` | 預設私人帳號；依資料夾或 remote 用 `includeIf` 切換 |
 | `.gitconfig-personal` / `.gitconfig-sporty` | `~/` 同名 | 各帳號的 user 和 SSH key |
 | `.ssh/config` | `~/.ssh/config` | GitHub 預設用私人 key。key 本身不進 repo |
+| `.config/herdr/config.toml` | `~/.config/herdr/config.toml` | herdr 終端多工器設定 |
 | `zsh/<feature>.zsh` | — | 依功能分檔：`shell`、`nodejs`、`java`、`claude`… |
 | `zsh/*.local.zsh` | — | 機器 / 公司專屬設定，git 忽略，最後載入 |
 | `.p10k.zsh` | — | prompt 設定，`p10k configure` 會直接寫回這裡 |

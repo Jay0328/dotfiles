@@ -1,0 +1,38 @@
+onboarding = false
+
+[ui]
+
+[ui.sidebar]
+
+[ui.sidebar.agents]
+rows = [["state_icon", "machine", "workspace", "tab"], ["agent"]]
+
+# herdr-nvim: persistent per-tab nvim sidebar + agent-touched file picker
+[[keys.command]]
+key = "prefix+e"
+type = "plugin_action"
+command = "chmarax.herdr-nvim.toggle"
+description = "nvim sidebar"
+
+[[keys.command]]
+key = "prefix+o"
+type = "plugin_action"
+command = "chmarax.herdr-nvim.pick-file"
+description = "open file from agent output"
+
+# Orca-style indexed shortcuts: alt+1..9 switches workspace (Ghostty sends ESC+digit for cmd+1..9)
+[keys.indexed]
+workspaces = "alt"
+
+# ctrl+enter instead of ctrl+b: macOS Chinese IMEs swallow ctrl+b, and ctrl+b stays free for nvim/shell
+[keys]
+prefix = "ctrl+enter"
+
+[experimental]
+# Switch to the ASCII layout while prefix mode is active, so prefix+letter works with Zhuyin on
+switch_ascii_input_source_in_prefix = true
+# Keep the Zhuyin candidate window at the cursor in agent TUIs that hide the real cursor.
+# Limited to agents so nvim normal mode doesn't get a second cursor
+reveal_hidden_cursor_for_cjk_ime = true
+cjk_ime_agents = ["claude", "codex"]
+kitty_graphics = true
