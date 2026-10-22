@@ -9,6 +9,10 @@ background-image = ~/.config/ghostty/background-image.jpg
 background-image-opacity = 0.2
 background-image-fit = cover
 
+# Turn off ligatures so `gcn!=` shows as `gcn!=` instead of `gcn≠`
+font-feature = -calt
+font-feature = -liga
+
 # Ghostty is only the carrier for herdr: shortcuts translated into herdr input
 # (\x1b[13;5u = herdr prefix ctrl+enter in CSI-u form, \x1b<digit> = alt+<digit> = herdr [keys.indexed] workspaces)
 # Tabs (used most): cmd
