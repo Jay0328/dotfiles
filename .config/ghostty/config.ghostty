@@ -6,7 +6,7 @@ theme = TokyoNight Moon
 # Background: 80% opacity over a wallpaper, image dimmed to 25%. The image is not tracked; place it yourself.
 background-opacity = 0.8
 background-image = ~/.config/ghostty/background-image.jpg
-background-image-opacity = 0.25
+background-image-opacity = 0.2
 background-image-fit = cover
 
 # Ghostty is only the carrier for herdr: shortcuts translated into herdr input
