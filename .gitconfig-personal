@@ -4,3 +4,5 @@
 	email = gcobs135102@gmail.com
 [core]
 	sshCommand = ssh -i ~/.ssh/github_ed25519_personal -o IdentitiesOnly=yes
+[github]
+	user = Jay0328

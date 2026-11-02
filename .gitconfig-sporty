@@ -4,3 +4,5 @@
 	email = jay.chen@opennet.tw
 [core]
 	sshCommand = ssh -i ~/.ssh/github_rsa_sporty -o IdentitiesOnly=yes
+[github]
+	user = JayChen-OpenNetTW
