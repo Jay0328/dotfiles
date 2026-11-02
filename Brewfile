@@ -18,8 +18,6 @@ brew "gemini-cli"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Agent multiplexer that lives in your terminal
-brew "herdr"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
 # Load testing and performance measurement application
@@ -67,8 +65,6 @@ cask "font-meslo-lg-nerd-font"
 cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Native GUI client for an existing local Herdr daemon
-cask "penso/tap/herdr-gpui", trusted: true
 # IDE for orchestrating AI coding agents across terminals and worktrees
 cask "stablyai/orca/orca", trusted: true
 # Free and open-source OpenVPN client
