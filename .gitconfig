@@ -1,6 +1,18 @@
 [push]
     autoSetupRemote = true
 
+# delta：git diff / log / show 的顯示工具（brew: git-delta）
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    line-numbers = true
+    navigate = true
+    side-by-side = true
+[merge]
+    conflictstyle = zdiff3
+
 # 預設：私人帳號 (Jay0328)
 [include]
     path = ~/.gitconfig-personal

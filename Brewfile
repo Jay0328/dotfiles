@@ -18,6 +18,8 @@ brew "gemini-cli"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
 # Load testing and performance measurement application
