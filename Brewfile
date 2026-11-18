@@ -49,7 +49,7 @@ brew "pnpm"
 # Zsh plugin manager
 brew "zimfw"
 # Software to interact with Atlassian Cloud from the terminal
-brew "atlassian/acli/acli"
+brew "atlassian/acli/acli", trusted: true
 # SDKMAN! the Software Development Kit Manager
 brew "sdkman/tap/sdkman-cli"
 # Redis desktop manager
