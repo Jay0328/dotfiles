@@ -15,15 +15,17 @@
 
 | 路徑 | 用途 |
 | --- | --- |
-| `install.sh` | 建立 symlink。`LINKS` 每行格式為 `<repo 路徑>  <$HOME 下的路徑>`，以 `read -r` 解析，**路徑不能含空白**。既有檔案會備份到 `~/.dotfiles-backup/<時間戳>/` |
+| `install.sh` | 建立 symlink。`LINKS` 每行格式為 `<repo 路徑>  <$HOME 下的路徑>`，以 `read -r` 解析，**路徑不能含空白**。目標位置既有的檔案會被直接取代，不備份（靠 git 還原）。`layouts/.state/` 等 app 寫入的狀態在 `.gitignore` 排除 |
 | `.zprofile` / `.zshrc` / `.zimrc` | login shell、互動 shell、zim 模組清單 |
 | `zsh/<feature>.zsh` | 依功能分檔（shell、git、java 等），不依檔案類型分 |
 | `zsh/brew.zsh` | `brew()` wrapper：`install` / `uninstall` 會同步更新 `Brewfile` |
 | `Brewfile` | 套件清單。透過 wrapper 或 `brew bundle dump` 更新，不手動亂加 |
 | `.gitconfig`、`.gitconfig-personal`、`.gitconfig-sporty` | 預設設定，加上依資料夾或 remote 以 `includeIf` 切換的帳號設定 |
 | `.config/nvim/` | LazyVim。插件放在 `lua/plugins/*.lua`，每個檔案負責一類功能 |
+| `.hammerspoon/init.lua` | Hammerspoon 設定（macOS 自動化，目前只有 ctrl+` 切換 herdr-app）。`~/.hammerspoon/Spoons/` 是 Hammerspoon 自己的，不進 repo |
 | `.config/ghostty/config.ghostty` | Ghostty 設定。背景圖不進 repo（見 `.gitignore`） |
 | `.config/herdr/config.toml` | herdr TUI 設定（TUI 已停用） |
+| `.config/herdr-app/` | herdr-app 設定：`keys.json`、`settings.json` 兩個檔案，加上 `layouts/`、`themes/` 整個目錄。`shared.json`、`view.json`、`installed.json`、socket、`mods/` 等 app 寫入的狀態不進 repo（`install.sh` 只連結列出的路徑）。 |
 
 ## 驗證
 

@@ -4,3 +4,6 @@ zsh/*.local.zsh
 # Only the ssh config belongs here — never keys.
 .ssh/*
 !.ssh/config
+
+# herdr-app 的 layouts/.state 是 app 寫入的版面點擊狀態，不進 repo
+.config/herdr-app/layouts/.state/

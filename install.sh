@@ -2,12 +2,11 @@
 #
 # Link the dotfiles in this repo into $HOME.
 #
-#   ./install.sh          link only (existing files are backed up first)
+#   ./install.sh          link only (existing files at the target are replaced, not backed up; use git to recover)
 #   ./install.sh --deps   also install everything in Brewfile (zsh plugins are in .zimrc)
 set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
 
 # "<path in repo>  <path under $HOME>"
 LINKS=(
@@ -19,7 +18,12 @@ LINKS=(
   ".ssh/config          .ssh/config"
   ".config/herdr/config.toml  .config/herdr/config.toml"
   ".config/ghostty/config.ghostty  .config/ghostty/config.ghostty"
+  ".config/herdr-app/keys.json  .config/herdr-app/keys.json"
+  ".config/herdr-app/settings.json  .config/herdr-app/settings.json"
+  ".config/herdr-app/layouts  .config/herdr-app/layouts"
+  ".config/herdr-app/themes  .config/herdr-app/themes"
   ".config/nvim  .config/nvim"
+  ".hammerspoon/init.lua  .hammerspoon/init.lua"
 )
 
 say() { printf '  %-8s %s\n' "$1" "$2"; }
@@ -33,9 +37,8 @@ link() {
   fi
 
   if [[ -e "$dst" || -L "$dst" ]]; then
-    mkdir -p "$BACKUP_DIR/$(dirname "$2")"
-    mv "$dst" "$BACKUP_DIR/$2"
-    say backup "$2 -> $BACKUP_DIR/$2"
+    rm -rf "$dst"
+    say replace "$2"
   fi
 
   mkdir -p "$(dirname "$dst")"

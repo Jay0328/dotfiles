@@ -1,0 +1,10 @@
+{
+  "font_ligatures": false,
+  "minimum_contrast": 1,
+  "sounds": {
+    "enabled": true
+  },
+  "theme": "tokyo-night",
+  "ui_font": "JetBrains Mono",
+  "zoom": 1
+}
