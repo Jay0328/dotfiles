@@ -67,6 +67,8 @@ cask "font-meslo-lg-nerd-font"
 cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Desktop app for terminals and coding agents
+cask "herdr-app"
 # IDE for orchestrating AI coding agents across terminals and worktrees
 cask "stablyai/orca/orca", trusted: true
 # Free and open-source OpenVPN client
