@@ -7,6 +7,9 @@
     16
   ],
   "background": { "image": "backgrounds/chisa-1-dim.jpg", "fit": "cover" },
+  "colors": {
+    "chrome": "#00000000"
+  },
   "terminal_opacity": 0,
   "terminal_padding": [
     14,
